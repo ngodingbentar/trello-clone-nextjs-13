@@ -1,6 +1,6 @@
 import './globals.css'
 import type { Metadata } from 'next'
-import Header from '@/components/Header'
+// import Header from '@/components/Header'
 
 export const metadata: Metadata = {
   title: 'Trello clone - Ngodingbentar',
@@ -14,8 +14,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body>
-        <Header />
+      <body className='bg-[#F5F6F8]'>
         {children}</body>
     </html>
   )

@@ -1,8 +1,10 @@
+import Header from "@/components/Header"
+
 function Home () {
   return (
-    <>
-      <div>Home</div>
-    </>
+    <main>
+      <Header />
+    </main>
   )
 }
 
