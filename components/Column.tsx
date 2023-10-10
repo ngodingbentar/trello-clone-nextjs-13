@@ -1,3 +1,4 @@
+import { Todo, TypedColumn } from '@/typings'
 import React from 'react'
 import { Draggable, Droppable } from 'react-beautiful-dnd'
 
@@ -8,7 +9,6 @@ type Props = {
 }
 function Column({id, todos, index}: Props) {
   return (
-    <React.StrictMode>
       <Draggable draggableId={id} index={index}>
         {(provided) => (
           <div
@@ -31,7 +31,6 @@ function Column({id, todos, index}: Props) {
           </div>
         )}
       </Draggable>
-    </React.StrictMode>
   )
 }
 
