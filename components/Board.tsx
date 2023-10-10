@@ -7,10 +7,11 @@ import ColumnComp from './Column';
 import { Column } from '@/typings';
 
 function Board() {
-  const [board, getBoard, setBoardState] = useBoardStore((state) => [
+  const [board, getBoard, setBoardState, updateTodoInDb] = useBoardStore((state) => [
     state.board,
     state.getBoard,
 		state.setBoardState,
+		state.updateTodoInDb,
   ])
 
   useEffect(() => {
@@ -70,6 +71,7 @@ function Board() {
         id: startCol.id,
         todos: newTodos,
       };
+			// make newColumns because board.columns is imutable
       const newColumns = new Map(board.columns);
       newColumns.set(startCol.id, newCol);
 
@@ -79,7 +81,6 @@ function Board() {
       const finishTodos = Array.from(finishCol.todos);
       finishTodos.splice(destination.index, 0, todoMoved);
 
-			// make newColumns because board.columns is imutable
       const newColumns = new Map(board.columns);
       const newCol = {
         id: startCol.id,
@@ -93,7 +94,7 @@ function Board() {
       });
 
       // update in db
-      // updateTodoInDb(todoMoved, finishCol.id);
+      updateTodoInDb (todoMoved, finishCol.id);
 
       setBoardState({ ...board, columns: newColumns });
     }
