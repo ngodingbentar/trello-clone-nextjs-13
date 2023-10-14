@@ -35,7 +35,7 @@ export async function POST(request: Request) {
 
         return NextResponse.json(data.choices[0].message)
     } catch (error) {
-        console.log("error", error?.message ?? error);
+        console.log("error", error);
 
         // mimic response expected by calling function
         return NextResponse.json({ content: "Could not connect with ChatGPT" })
