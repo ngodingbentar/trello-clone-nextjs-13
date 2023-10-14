@@ -54,9 +54,6 @@ function Board() {
       todos: finishColIndex[1].todos,
     };
 
-		console.log('startCol', startCol)
-		console.log('finishCol', finishCol)
-
 		if (!startCol || !finishCol) return;
 
     if (source.index === destination.index && startCol === finishCol) return;

@@ -1,3 +1,4 @@
+import Modal from '@/components/Modal'
 import './globals.css'
 import type { Metadata } from 'next'
 // import Header from '@/components/Header'
@@ -15,7 +16,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className='bg-[#F5F6F8]'>
-        {children}</body>
+        {children}
+        <Modal />
+      </body>
     </html>
   )
 }

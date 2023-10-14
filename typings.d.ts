@@ -15,6 +15,10 @@ interface Todo {
   title: string
   status: string
   image?: Image
+  $collectionId?: string
+  $databaseId?: string,
+  $updatedAt?: string,
+  $permissions?: Array
 }
 
 interface Image {
@@ -41,4 +45,12 @@ export interface IData {
 	tasks: ITasks;
 	columns: IColumns;
 	columnOrder: string[];
+}
+
+interface TaskType {
+  id: TypedColumn,
+  name: string,
+  description: string,
+  color: string,
+  ringColor: string,
 }

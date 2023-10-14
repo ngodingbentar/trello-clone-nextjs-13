@@ -1,7 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   images: {
-    domains: ['picsum.photos', 'links.papareact.com', 'cloud.appwrite.io']
+    domains: ['picsum.photos', 'cloud.appwrite.io']
   },
   async rewrites() {
     return [
