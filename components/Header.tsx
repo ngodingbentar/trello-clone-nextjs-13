@@ -37,7 +37,7 @@ function Header () {
     <header className="header">
       <div className="flex flex-col md:flex-row items-center p-5 bg-gray-500/10 rounded-b-2xl">
 
-        <div className="absolute top-0 left-0 w-full h-60 bg-gradient-to-br from-pink-400 to-blue-400 rounded-md filter blur-3xl opacity-50 -z-50" />
+        <div className="absolute top-0 left-0 w-full h-60 bg-gradient-to-br from-green-400 to-blue-400 rounded-md filter blur-3xl opacity-50 -z-50" />
         <Image src="https://picsum.photos/50/50" alt="my-image" width={50} height={50} className="pb-10 md:pb-0 object-contain" />
 
         <div className='flex items-center space-x-5 flex-1 justify-end w-full'>
